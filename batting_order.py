@@ -56,7 +56,8 @@ def get_game_page(team_page_url):
 def get_info(game_page_url, team_page_title):
     """
     This function is to get the raw html table regarding play-by-play
-    given a box score page.
+    given a box score page and the raw html table regarding targeted team's
+    batting stats.
     The input is a single game's page.
     """
     soup = fetch(game_page_url)
