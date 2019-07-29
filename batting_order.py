@@ -57,12 +57,13 @@ def get_info(game_page_url, team_page_title):
     """
     This function is to get the raw html table regarding play-by-play
     given a box score page and the raw html table regarding targeted team's
-    batting stats.
+    batting statsg.
     The input is a single game's page.
     """
     soup = fetch(game_page_url)
     target_table = soup.findAll('table', id="play_by_play")
-    team_title_adj = team_page_title.replace(" ", "") + 'batting'
+    team_title_adj = team_page_title.replace(" ", "")\
+                                    .replace(".", '') + 'batting'
     target_table_val = soup.findAll('table', id=team_title_adj)
     return target_table[0], target_table_val[0]
 
