@@ -157,7 +157,7 @@ def get_pa(game_page_url, team, team_page_title):
                 # baseball-reference.com/boxes/MIA/MIA201807010.shtml
                 if 'walk' not in p_des:
                     team_df_PA.loc[i] = 0
-        # wild pitch: (OAK) 
+        # wild pitch: (OAK)
         # baseball-reference.com/boxes/NYA/NYA201805120.shtml
         # caught stealing double play: (PHI)
         # baseball-reference.com/boxes/PHI/PHI201804200.shtml
@@ -165,6 +165,7 @@ def get_pa(game_page_url, team, team_page_title):
         # baseball-reference.com/boxes/SEA/SEA201808180.shtml
         if ('wild pitch' in p_des and 'walk' not in p_des
                 and 'strikeout' not in p_des) \
+                or 'picked off' in p_des \
                 or ('caught stealing' in p_des and 'out at' in p_des) \
                 or 'balk' in p_des:
             team_df_PA.loc[i] = 0
@@ -184,9 +185,14 @@ def get_pa(game_page_url, team, team_page_title):
     team_df_gb["Team"] = team  # Add team name
     team_df_gb["URL"] = game_page_url
     # Validation
+    # Outliers include some false accounting in PA
+    # For example, in this game, Chris Young's PA got counted twice.
+    # baseball-reference.com/boxes/BOS/BOS201708250.shtml
+    otls = ["https://www.baseball-reference.com/boxes/BOS/BOS201708250.shtml"]
     if team_df_gb["PA"].sum() != team_actual_pa:
-        print(game_page_url)
-        print(team_df_gb["PA"].sum() - team_actual_pa)
+        if game_page_url not in otls:
+            print(game_page_url)
+            print(team_df_gb["PA"].sum() - team_actual_pa)
     return team_df_gb
 
 
