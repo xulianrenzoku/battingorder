@@ -156,7 +156,10 @@ def get_pa(game_page_url, team, team_page_title):
                     or ('steals' in p_des and 'out' in p_des):
                 # Extreme case in one of the Mets game
                 # baseball-reference.com/boxes/MIA/MIA201807010.shtml
-                if 'walk' not in p_des and 'strikeout' not in p_des:
+                # Ultimate extreme case: (Neil Walker)
+                # baseball-reference.com/boxes/PIT/PIT201207210.shtml
+                if 'walk' not in p_des.replace('walker', '') \
+                        and 'strikeout' not in p_des:
                     team_df_PA.loc[i] = 0
         # wild pitch: (OAK)
         # baseball-reference.com/boxes/NYA/NYA201805120.shtml
@@ -172,8 +175,11 @@ def get_pa(game_page_url, team, team_page_title):
                      and 'strikeout' not in p_des) \
                 or ('baserunner advance' in p_des and 'walk' not in p_des
                     and 'strikeout' not in p_des) \
-                or ('caught stealing' in p_des and 'out at' in p_des) \
+                or ('caught stealing' in p_des and 'out at' in p_des
+                    and 'walk' not in p_des and 'strikeout' not in p_des) \
                 or ('baserunner out advancing' in p_des and 'out at' in p_des
+                    and 'walk' not in p_des and 'strikeout' not in p_des) \
+                or ('steals' in p_des and 'walk' not in p_des
                     and 'strikeout' not in p_des) \
                 or 'balk' in p_des:
             team_df_PA.loc[i] = 0
