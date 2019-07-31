@@ -152,6 +152,7 @@ def get_pa(game_page_url, team, team_page_title):
             # baseball-reference.com/boxes/OAK/OAK201808030.shtml
             if 'picked off' in p_des or 'caught stealing' in p_des \
                     or 'baserunner out advancing' in p_des \
+                    or 'passed ball' in p_des \
                     or ('steals' in p_des and 'out' in p_des):
                 # Extreme case in one of the Mets game
                 # baseball-reference.com/boxes/MIA/MIA201807010.shtml
@@ -165,7 +166,8 @@ def get_pa(game_page_url, team, team_page_title):
         # baseball-reference.com/boxes/SEA/SEA201808180.shtml
         if ('wild pitch' in p_des and 'walk' not in p_des
                 and 'strikeout' not in p_des) \
-                or 'picked off' in p_des \
+                or ('picked off' in p_des and 'walk' not in p_des
+                     and 'strikeout' not in p_des) \
                 or ('caught stealing' in p_des and 'out at' in p_des) \
                 or 'balk' in p_des:
             team_df_PA.loc[i] = 0
