@@ -44,10 +44,14 @@ def get_game_page(team_page_url):
     for item in soup.find_all('span', {'class':"poptip"}):
         winTag = item.find(class_= "count win")
         lossTag = item.find(class_= "count notwin")
+        tieTag = item.find(class_= "count unplayed")
         if winTag:
             url = "https://www.baseball-reference.com" + item.a['href']
             url_list.append(url)
         elif lossTag:
+            url = "https://www.baseball-reference.com" + item.a['href']
+            url_list.append(url)
+        elif tieTag:
             url = "https://www.baseball-reference.com" + item.a['href']
             url_list.append(url)
     return url_list
