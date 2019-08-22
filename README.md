@@ -2,7 +2,6 @@
 
 This project is motivated by a baseball question at Zhihu.com ([为什么棒球第四棒是强棒？](https://www.zhihu.com/question/269068185))
 
-## Summary of Project
 The project consists of three parts.
 - Data Scraping
 - Data Quality Validation
