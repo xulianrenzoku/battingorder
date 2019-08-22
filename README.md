@@ -2,7 +2,8 @@
 
 This project is motivated by a baseball question at Zhihu.com ([为什么棒球第四棒是强棒？](https://www.zhihu.com/question/269068185))
 
-The project consists of three parts.
+
+This project consists of three parts.
 - Data Scraping
 - Data Quality Validation
 - Data Analysis (Unfinished)
@@ -19,7 +20,9 @@ Since we are pursuing the plate appearnce numbers for each batting order instead
 
 <img src='static/play_by_play_example.png'>
 
-The major challenge to tackle during the data scraping process, is to write a robust set of rules to identify whether the play description of an event makes a plate appearnce. In order to perfect the rules, I scraped all the records from 2011 to 2018 (38876 games in total), and obtained all the possible edge cases, from [a walk-off balk](https://www.baseball-reference.com/boxes/LAN/LAN201506180.shtml) to a 'Neil Walker caught stealing' (*Hint: a walk makes a plate appearance*). I mean, how can you not be romantic about baseball? 
+The major challenge to tackle during the data scraping process, is to write a robust set of rules to identify whether the play description of an event makes a plate appearnce. 
+
+In order to perfect the rules, I scraped all the records from 2011 to 2018 (38876 games in total), and obtained all the possible edge cases, from [a walk-off balk](https://www.baseball-reference.com/boxes/LAN/LAN201506180.shtml) to a stupid 'Neil Walker caught stealing' (*Hint: a walk makes a plate appearance*). I mean, how can you not be romantic about baseball? 
 
 [See Scraping Script](https://github.com/xulianrenzoku/battingorder/blob/master/batting_order.py)
 
