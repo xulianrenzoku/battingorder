@@ -4,11 +4,11 @@ This project is motivated by a baseball question at Zhihu.com - "Why teams let t
 
 
 This project consists of three parts.
-- Data Scraping
+- Data Acquisition
 - Data Quality Validation
 - Data Analysis (Unfinished)
 
-### Data Scraping
+### Data Acquisition
 For data scraping, the objective is to obtain three types of records for each batting order:
 - Number of plate appearances
 - Number of plate appearances with runners on base
