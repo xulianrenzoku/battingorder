@@ -36,3 +36,18 @@ In terms of time, it takes around 70 minutes to scrape a season (30 teams, 162 g
 [See data quality validation for 2011-17 seasons](https://github.com/xulianrenzoku/battingorder/blob/master/batting_order_data_scraping_quality_validation.ipynb)
 
 ### Data Analysis (Unfinished)
+
+One of the initial intuitions regarding where to insert your best hitter in the lineup is to let him have as many shots as possible. Therefore, it seems nature to put him on the first spot since that spot gets the most opportunities. As the following plot suggests, the leadoff man accumulated about 2.5% more plate appearances (PA) than the second guy and over 7% more than the cleanup hitter.
+
+<img src='raw/MLB_PA_sum.png'>
+
+However, there are differences among PAs in terms of quality. A bases loaded situation is clearly more valuable than a bases empty one due to the upside that a hit could bring. When there are runners on bases, you definitely would like to see your best bat is in position to hit. So, it is necessary to see what spots get the most opportunities when there are runners on base or runners in scoring positions. 
+    
+Below is an eight-year trend regarding how many quality PAs each spot got on average in an American League game. National League's record was not included since most pitchers were not on big league level in terms of hitting.
+
+<img src='raw/AL_OB_RISP_mean.jpg'>
+
+As the plot above suggests, the leadoff man has the least share of quality PAs. In 2018 season, the No.1 hitter averaged less than 1 RISP PAs per game. On the other side, those batting cleanup get the most share in terms of quality PAs.
+
+In recent years, there are some trends of teams putting their best hitters in the No.2 spot. Mike Trout has been hitting in the second spot for years. However, according to plots above, it seems the number of RISP PAs is declining for this spot.
+
