@@ -43,15 +43,15 @@ One of the initial intuitions regarding where to insert your best hitter in the 
 
 However, there are differences among PAs in terms of quality. A bases loaded situation is clearly more valuable than a bases empty one due to the upside that a hit could bring. When there are runners on bases, you definitely would like to see your best bat is in position to hit. So, it is necessary to see what spots get the most opportunities when there are runners on base or runners in scoring positions. 
     
-Below is an eight-year trend regarding how many quality PAs each spot got on average in an American League game. National League's record was not included since most pitchers were not on big league level in terms of hitting.
+Below is an eight-year trend regarding how many quality PAs each spot got on average in an American League game (National League's record was not included since most pitchers were not on big league level in terms of hitting).
 
 <img src='raw/AL_OB_RISP_mean.jpg'>
 
-As the plot above suggests, the leadoff man has the least share of quality PAs. In 2018 season, the No.1 hitter averaged less than 1 RISP PAs per game. On the other side, those batting cleanup get the most share in terms of quality PAs.
+As the plot above suggests, the leadoff man had the least share of quality PAs. In 2018 season, the No.1 hitter averaged less than 1 PAs w/ RISP per game. On the other side, those batting cleanup got the most share in terms of quality PAs.
 
-In recent years, there are some trends of teams putting their best hitters in the No.2 spot. Mike Trout has been hitting in the second spot for years. However, according to plots above, it seems the number of PAs w/ RISP is declining for this spot.
+In recent years, there are some trends of teams putting their best hitters in the No.2 spot. Mike Trout has been hitting in the second spot for years. However, according to plots above, it seems the number of PAs w/ RISP was declining for this spot.
 
-In addition, though there is no one exact rule to follow in terms of lineup construction, but the 2-hole generally does not get the biggest share of quality opportunities if we take a look at the teams with the best offense over the past eight years. 
+In addition, though there is no one exact rule to follow in terms of lineup construction, but the 2-hole generally does not collect the biggest share of quality opportunities when it comes to the best offense. 
 
 ```
 Below are the team with top numbers in runs per game:
@@ -67,7 +67,7 @@ Below are the team with top numbers in runs per game:
 
 <img src='raw/RG1_OB_RISP_mean.jpg'>
 
-If we try to 'smooth' out the randomness by including five top offensive teams for each season, it seems that there is a significant difference between the 2-hole and the 4-hole in quality plate appearances as well.
+If we try to 'smooth' out the randomness by including top five offensive teams for each season, it seems that there is a significant difference between the 2-hole and the 4-hole in quality plate appearances as well. If your No.2 hitter gets 0.2 PAs w/ RISP less than than your cleanup hitter per game, then it means the former would collect 30 PAs w/ RISP less in a season.
 
 <img src='raw/RG5_OB_RISP_mean.jpg'>
 
