@@ -49,5 +49,29 @@ Below is an eight-year trend regarding how many quality PAs each spot got on ave
 
 As the plot above suggests, the leadoff man has the least share of quality PAs. In 2018 season, the No.1 hitter averaged less than 1 RISP PAs per game. On the other side, those batting cleanup get the most share in terms of quality PAs.
 
-In recent years, there are some trends of teams putting their best hitters in the No.2 spot. Mike Trout has been hitting in the second spot for years. However, according to plots above, it seems the number of RISP PAs is declining for this spot.
+In recent years, there are some trends of teams putting their best hitters in the No.2 spot. Mike Trout has been hitting in the second spot for years. However, according to plots above, it seems the number of PAs w/ RISP is declining for this spot.
+
+In addition, though there is no one exact rule to follow in terms of lineup construction, but the 2-hole generally does not get the biggest share of quality opportunities if we take a look at the teams with the best offense over the past eight years. 
+
+```
+Below are the team with top numbers in runs per game:
+- 2011 Boston Red Sox
+- 2012 Texas Rangers
+- 2013 Boston Red Sox
+- 2014 Los Angeles Angels
+- 2015 Toronto Blue Jays
+- 2016 Boston Red Sox
+- 2017 Houston Astros
+- 2018 Boston Red Sox
+```
+
+<img src='raw/RG1_OB_RISP_mean.jpg'>
+
+If we try to 'smooth' out the randomness by including five top offensive teams for each season, it seems that there is a significant difference between the 2-hole and the 4-hole in quality plate appearances as well.
+
+<img src='raw/RG5_OB_RISP_mean.jpg'>
+
+In Keith Law's book 'Smart Baseball', the author mentioned that a team tends to have an over .500 winning percentage if it accumulates over 38 PAs in a game (page 95). By filtering out all the games below 39 PAs, it is obvious to see that the 3-hole and the 4-hole are in their own tier, while the 2-hole got significant lower share of its opportunities, especailly with RISP.
+
+<img src='raw/o38_OB_RISP_mean.jpg'>
 
