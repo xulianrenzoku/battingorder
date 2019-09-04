@@ -47,7 +47,7 @@ Hypothesis test is the less preferred choice of analysis due to two reasons. Fir
 
 One of the initial intuitions regarding where to insert your best hitter in the lineup is to let him have as many shots as possible. Therefore, it seems natural to put him on the first spot since that spot gets the most opportunities. As the following plot suggests, the leadoff man accumulated about 2.5% more plate appearances (PA) than the second guy and over 7% more than the cleanup hitter.
 
-<img src='raw/MLB_PA_sum.png'>
+<img src='raw/MLB_PA_sum.png' width=500>
 
 However, there are differences among PAs in terms of quality. A bases loaded situation is clearly more valuable than a bases empty one due to the upside that a hit could bring. When there are runners on bases, you definitely would like to see your best bat is in position to hit. So, it is necessary to see what spots get the most opportunities when there are runners on base or runners in scoring positions. 
     
@@ -97,7 +97,7 @@ Let's take a look at the RE24 scores for the 2018 Los Angeles Angels. And obviou
 
 However, the 2-hole, a position where Trout batted in most games, averaged less than 1 PA w/ RISP per game in 2018. On the other side, the cleanup spot, which was normally occupied the great Albert Pujols, collected approximately .4 more PAs w/ RISP per game. That would mean, Trout would get 65 PAs w/ RISP than the cleanup spot if we expand it to a 162-game season. And that's a significant difference.
 
-<img src='raw/LAA/LAA_2018_PA.png'>
+<img src='raw/LAA/LAA_2018_PA.png' width=350>
 
 #### Conclusion
 
