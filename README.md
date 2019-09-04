@@ -6,7 +6,7 @@ This project is motivated by a baseball question at Zhihu.com - "Why teams let t
 This project consists of three parts.
 - Data Acquisition
 - Data Quality Validation
-- Data Analysis (Unfinished)
+- Data Analysis 
 
 ### Data Acquisition
 For data scraping, the objective is to obtain three types of records for each batting order:
@@ -35,9 +35,17 @@ In terms of time, it takes around 70 minutes to scrape a season (30 teams, 162 g
 
 [See data quality validation for 2011-17 seasons](https://github.com/xulianrenzoku/battingorder/blob/master/batting_order_data_scraping_quality_validation.ipynb)
 
-### Data Analysis (Unfinished)
+### Data Analysis
 
-One of the initial intuitions regarding where to insert your best hitter in the lineup is to let him have as many shots as possible. Therefore, it seems nature to put him on the first spot since that spot gets the most opportunities. As the following plot suggests, the leadoff man accumulated about 2.5% more plate appearances (PA) than the second guy and over 7% more than the cleanup hitter.
+#### Methodology
+Hypothesis test is the less preferred choice of analysis due to two reasons. First, we would always get to the point that 'one batting position has significantly more plate appearances with runners in scoring positions than another on average' with a super large sample size. Second, though hypothesis would tell us which batting position is better, but would not tell us the magnitude in terms of how much better.
+
+#### 8-Year Trend Analysis
+
+*Overview of plate appearances for each batting spot in 2018 MLB season*
+<img src='raw/2018_season.png'>
+
+One of the initial intuitions regarding where to insert your best hitter in the lineup is to let him have as many shots as possible. Therefore, it seems natural to put him on the first spot since that spot gets the most opportunities. As the following plot suggests, the leadoff man accumulated about 2.5% more plate appearances (PA) than the second guy and over 7% more than the cleanup hitter.
 
 <img src='raw/MLB_PA_sum.png'>
 
@@ -74,4 +82,22 @@ If we try to 'smooth' out the randomness by including top five offensive teams f
 In Keith Law's book 'Smart Baseball', the author mentioned that a team tends to have an over .500 winning percentage if it accumulates over 38 PAs in a game (page 95). By filtering out all the games below 39 PAs, it is obvious to see that the 3-hole and the 4-hole are in their own tier, while the 2-hole got significant lower share of its opportunities, especailly with RISP.
 
 <img src='raw/o38_OB_RISP_mean.jpg'>
+
+[See trend analysis](https://github.com/xulianrenzoku/battingorder/blob/master/batting_order_trend_analysis.ipynb)
+
+#### Problem with 'Best Hitter Bat Second'
+
+Teams care about lineup construction since a decision in lineup spot placement would ultimately affect a team's ability in manufacturing runs. Ideally, you would prefer putting your best guy in a position that allows him to maximize team's ability to score runs. Conversely, you don't want a less qualified hitter to do the heavy-lifting.
+
+There are various metrics that measure how well hitters are capitalizing on their opportunities, and Run Expectancy based on 24 base-out states (RE24) is one of the better ones.
+
+Let's take a look at the RE24 scores for the 2018 Los Angeles Angels. And obviously, Mike Trout has the RE24 score in the team.
+
+<img src='raw/LAA/LAA_2018_RE24.png'>
+
+However, the 2-hole, a position where Trout batted in most games, averaged less than 1 PA w/ RISP per game in 2018. On the other side, the cleanup spot collected approximately .4 more PAs w/ RISP per game. That would mean, Trout would get 65 PAs w/ RISP than the cleanup spot if we expand it to a 162-game season. And that's a significant difference.
+
+<img src='raw/LAA/LAA_2018_PA.png>
+
+#### Conclusion
 
