@@ -95,9 +95,12 @@ Let's take a look at the RE24 scores for the 2018 Los Angeles Angels. And obviou
 
 <img src='raw/LAA/LAA_2018_RE24.png'>
 
-However, the 2-hole, a position where Trout batted in most games, averaged less than 1 PA w/ RISP per game in 2018. On the other side, the cleanup spot collected approximately .4 more PAs w/ RISP per game. That would mean, Trout would get 65 PAs w/ RISP than the cleanup spot if we expand it to a 162-game season. And that's a significant difference.
+However, the 2-hole, a position where Trout batted in most games, averaged less than 1 PA w/ RISP per game in 2018. On the other side, the cleanup spot, which was normally occupied the great Albert Pujols, collected approximately .4 more PAs w/ RISP per game. That would mean, Trout would get 65 PAs w/ RISP than the cleanup spot if we expand it to a 162-game season. And that's a significant difference.
 
-<img src='raw/LAA/LAA_2018_PA.png>
+<img src='raw/LAA/LAA_2018_PA.png'>
 
 #### Conclusion
 
+Assigning your best hitter to a spot in the lineup is not an easy task. As the analysis above mentions, there is a clear trade-off between the number of plate appearnces overall and the number of plate appearances that are quality. 
+
+Nonetheless, teams adjust its lineup thanks to the desire to maximize its run-scoring ability. Therefore, the cleanup spot is still the most important spot with data showing the spot's track record in getting the most share of quality plate appearances.
