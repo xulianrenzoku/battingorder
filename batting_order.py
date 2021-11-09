@@ -24,11 +24,11 @@ def get_team_page(season_page_url):
     for item in soup.find_all('th',
                               {'scope':"row",
                                'class':"left ",
-                               'data-stat':"team_ID"}
+                               'data-stat':"team_name"}
                               ):
         if item.a:
             url = "https://www.baseball-reference.com" + item.a['href']
-            title = item.a['title']
+            title = item.text
             url_list.append((url, title))
     return list(set(url_list))
 
